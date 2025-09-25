@@ -5,6 +5,7 @@ import { ThemeToggle } from "@/components/theme-toggle";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { useActiveSection } from "@/hooks/use-active-section";
+import { siteConfig } from "@/lib/site.config";
 
 const navLinks = [
   { id: "home", label: "Home" },
@@ -19,7 +20,8 @@ export function Header() {
     <header className="w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-sm sticky top-0 z-50">
       <div className="container mx-auto flex items-center justify-between py-4 px-6">
         {/* Logo */}
-        <h1 className="text-xl font-bold">MyWebsite</h1>
+
+        <h1 className="text-xl font-bold">{siteConfig.name}</h1>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex space-x-6">

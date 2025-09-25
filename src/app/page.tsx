@@ -2,6 +2,7 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { siteConfig } from "@/lib/site.config";
 
 export default function HomePage() {
   return (
@@ -60,10 +61,10 @@ export default function HomePage() {
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Have questions? Reach out at{" "}
             <a
-              href="mailto:info@mywebsite.com"
+              href={`mailto:${siteConfig.supportEmail}`}
               className="text-primary underline"
             >
-              info@mywebsite.com
+              {siteConfig.supportEmail}
             </a>
           </p>
         </section>
